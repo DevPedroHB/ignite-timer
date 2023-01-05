@@ -17,13 +17,11 @@ export function NewCycleForm() {
         disabled={!!activeCycle}
         {...register("task")}
       />
-
       <datalist id="task-suggestions">
         {cycles.map((cycle) => (
           <option value={cycle.task} />
         ))}
       </datalist>
-
       <label htmlFor="minutesAmount">durante</label>
       <MinutesAmountInput
         type="number"
@@ -35,7 +33,6 @@ export function NewCycleForm() {
         disabled={!!activeCycle}
         {...register("minutesAmount", { valueAsNumber: true })}
       />
-
       <span>minutos.</span>
     </FormContainer>
   );

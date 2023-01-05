@@ -20,17 +20,26 @@ export const HistoryContainer = styled.main`
     font-size: 1.5rem;
     color: ${(props) => props.theme["gray-100"]};
   }
+
+  @media screen and (max-width: 1024px) {
+    padding: 2.5rem 1.5rem 1.5rem 1.5rem;
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 2.5rem 0 0 0;
+  }
 `;
 
 export const HistoryList = styled.div`
   flex: 1;
   overflow: auto;
   margin-top: 2rem;
+  border-radius: 8px;
 
   table {
     width: 100%;
     border-collapse: collapse;
-    min-width: 600px;
+    min-width: 37.5rem;
 
     th {
       background-color: ${(props) => props.theme["gray-600"]};
@@ -39,16 +48,6 @@ export const HistoryList = styled.div`
       color: ${(props) => props.theme["gray-100"]};
       font-size: 0.875rem;
       line-height: 1.6;
-
-      &:first-child {
-        border-top-left-radius: 8px;
-        padding-left: 1.5rem;
-      }
-
-      &:last-child {
-        border-top-right-radius: 8px;
-        padding-right: 1.5rem;
-      }
     }
 
     td {
